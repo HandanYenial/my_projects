@@ -1,15 +1,14 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Section = styled.div`
   height: 100vh;
-  background-color:#A13333;
-
+  scroll-snap-align:center;
 `;
 
 function Contact() {
   return (
-    <div>Contact</div>
+    <Section>Contact</Section>
   )
 }
 

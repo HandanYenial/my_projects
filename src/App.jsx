@@ -8,9 +8,19 @@ import styled from "styled-components";
 //div a classname.
 const Container = styled.div`
   height: 100vh;
-  background-color:#711A75;
-
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  overflow-y: auto;
+  scrollbar-width: none;
+  color: white;
+  background: url("./img/unsplash.jpg");
+  &::-webkit-scrollbar{
+    display: none;
+  }
 `;
+// scroll-snap-type: y mandatory;so scrolling will work in any occassion.
+// scrollbar-width:none; will delete the scroll bar between pages. but it will work for only firefox, so 
+// I'll add webkit to be sure it works for chrome too.
 
 function App() {
   return (

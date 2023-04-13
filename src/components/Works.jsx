@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from "styled-components";
 
-const Container = styled.div`
+const Section = styled.div`
   height: 100vh;
-  background-color:#F582A7;
-
+  scroll-snap-align:center;
 `;
 
 function Works() {
