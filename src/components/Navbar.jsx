@@ -18,6 +18,8 @@ const Container = styled.div`
   color:#FEB139;
   align-items:center;
   padding:20px 0px;
+  font-weight:bold;
+  font-size:large;
 
   @media only screen and (max-width:768px){
     width:100%;
