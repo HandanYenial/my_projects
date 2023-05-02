@@ -1,48 +1,75 @@
 import React from "react";
+import { geoCentroid } from "d3-geo";
 import {
   ComposableMap,
   Geographies,
   Geography,
-  Annotation,
-  ZoomableGroup
+  Marker,
+  Annotation
 } from "react-simple-maps";
+
+import allStates from "../data/allstates.json";
+
+const geoUrl = "https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json";
+
+const offsets = {
+  NY: [40, -73]
+};
 
 const Map = () => {
   return (
-    <ComposableMap
-      projection="geoAzimuthalEqualArea"
-      projectionConfig={{
-        rotate: [-10.0, -52.0, 0],
-        center: [-5, -3],
-        scale: 1100
-      }}
-    >
-      <Geographies
-        geography="/features.json"
-        fill="#D6D6DA"
-        stroke="#FFFFFF"
-        strokeWidth={0.5}
-      >
-        {({ geographies }) =>
-          geographies.map((geo) => (
-            <Geography key={geo.rsmKey} geography={geo} />
-          ))
-        }
+    <ComposableMap projection="geoAlbersUsa" style={{width:"100%", height:"100%"}}>
+      <Geographies geography={geoUrl}>
+        {({ geographies }) => (
+          <>
+            {geographies.map(geo => (
+              <Geography
+                key={geo.rsmKey}
+                stroke="#8B1874"
+                geography={geo}
+                fill="#B0DAFF"
+              />
+            ))}
+            {geographies.map(geo => {
+              const centroid = geoCentroid(geo);
+              const cur = allStates.find(s => s.val === geo.id);
+              return (
+                <g key={geo.rsmKey + "-name"}>
+                  {cur &&
+                    centroid[0] > -160 &&
+                    centroid[0] < -67 &&
+                    (Object.keys(offsets).indexOf(cur.id) === -1 ? (
+                      <Marker coordinates={centroid}>
+                        <text y="2" fontSize={14} textAnchor="middle">
+                          {cur.id}
+                        </text>
+                      </Marker>
+                    ) : (
+                      <Annotation
+                        subject={centroid}
+                        dx={-40}
+                        dy={-60}
+                        fill="#BE5A83"
+                        stroke="#8B1874"
+                        connectorProps={{
+                          stroke:"#8B1874",
+                          strokeWidth:2,
+                          strokeLinecap:"round",
+                         
+                        }}
+  
+                      >
+                        <text x={-40} fontSize={30} alignmentBaseline="left">
+                          {cur.id}
+                        </text>
+                      </Annotation>
+                    ))}
+                </g>
+              );
+            })}
+          </>
+        )}
       </Geographies>
-      <Annotation
-        subject={[2.3522, 48.8566]}
-        dx={-90}
-        dy={-30}
-        connectorProps={{
-          stroke: "#FF5533",
-          strokeWidth: 3,
-          strokeLinecap: "round"
-        }}
-      >
-        <text x="-8" textAnchor="end" alignmentBaseline="middle" fill="#F53">
-          {"Paris"}
-        </text>
-      </Annotation>
     </ComposableMap>
   );
 };
