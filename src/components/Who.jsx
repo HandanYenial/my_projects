@@ -1,6 +1,9 @@
 
 import React from 'react';
 import styled from "styled-components";
+import { OrbitControls } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import Cube from "./Cube";
 
 
 const Section = styled.div`
@@ -83,10 +86,15 @@ const Button = styled.button`
 function Who(){
   return (
     <Section>
-    
       <Container>
         <Left>
-        
+        <Canvas camera={{ position: [5, 5, 5], fov: 25 }}>
+        <ambientLight intensity={0.25} />
+        <directionalLight position={[8,7,6,5,4,3,2,1]} />
+              <Cube/>
+              <OrbitControls enableZoom={false} autoRotate />
+         
+          </Canvas>
         </Left>
         <Right>
         <Title>
