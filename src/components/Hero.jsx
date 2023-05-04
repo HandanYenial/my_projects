@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from "styled-components";
 import Navbar from "./Navbar";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
+
 
 const Section = styled.div`
   height: 100vh;
@@ -78,7 +81,7 @@ const Button = styled.button`
   color:#112B3C;
   font-weight:500;
   width:100px;
-  padding:10px;
+  padding:15px;
   border:none;
   border-radius:5px;
   cursor:pointer;
@@ -134,6 +137,21 @@ function Hero(){
           <Button> Learn More </Button>
         </Left>
         <Right>
+        <Canvas>
+            
+              <OrbitControls enableZoom={false} />
+              <ambientLight intensity={1} />
+              <directionalLight position={[3, 2, 1]} />
+              <Sphere args={[1, 500, 500]} scale={2.4}>
+                <MeshDistortMaterial
+                  color="#EB5353"
+                  attach="material"
+                  distort={0.5}
+                  speed={2}
+                />
+              </Sphere>
+           
+          </Canvas>
           <Img src="./img/Pngtree.png"/>
           {/* <a href='https://pngtree.com/so/hijab'>hijab png from pngtree.com/</a> */}
         </Right>
@@ -143,4 +161,4 @@ function Hero(){
   )
 }
 
-export default Hero
+export default Hero;

@@ -1,5 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from "styled-components";
+
+import ProductDesign from "./ProductDesign";
+import WebDesign from "./WebDesign";
+
 
 //instead of creating 5 <ListIem>s, I can create an array of the data
 //and use it with map.
@@ -89,6 +93,8 @@ const Right = styled.div`
 `;
 
 function Works() {
+  const [work,setWork] = useState("Web Design");
+
   return (
     <Section>
       <Container>
@@ -102,7 +108,15 @@ function Works() {
           </List>
 
          </Left>
-         <Right></Right>
+         <Right>
+         {work === "Web Design" ? (
+            <WebDesign />
+          ) : work === "Development" ? (
+            <Development />
+          ) : (
+            <ProductDesign />
+          )}
+         </Right>
       </Container>
     </Section>
   );

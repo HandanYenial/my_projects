@@ -88,7 +88,8 @@ function Who(){
     <Section>
       <Container>
         <Left>
-        <Canvas camera={{ position: [5, 5, 5], fov: 25 }}>
+          {/* To give the size ofbox, camera effect is used:zoom */}
+        <Canvas camera={{ position: [8, 8, 8], fov: 25 }}>
         <ambientLight intensity={0.25} />
         <directionalLight position={[8,7,6,5,4,3,2,1]} />
               <Cube/>

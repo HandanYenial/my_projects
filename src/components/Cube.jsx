@@ -13,10 +13,10 @@ const Cube = () => {
       <boxGeometry />
       <meshStandardMaterial>
         <RenderTexture attach="map">
-          <PerspectiveCamera makeDefault position={[0, 0, 5]} />
-          <color attach="background" args={["#dc9dcd"]} />
+          <PerspectiveCamera makeDefault position={[0, 0, 9]} />
+          <color attach="background" args={["#FB2576"]} />
           <Text ref={textRef} fontSize={1} color="#555">
-            Portfolio
+            CodeMaze
           </Text>
         </RenderTexture>
       </meshStandardMaterial>

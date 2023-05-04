@@ -15,17 +15,21 @@ const Container = styled.div`
   width:1400px:
   display:flex;
   justify-content: space-between;
-  color:#FEB139;
-  align-items:center;
+  color:white;
+  align-items:left;
   padding:20px 0px;
   font-weight:bold;
-  font-size:large;
+  font-size:x-large;
 
   @media only screen and (max-width:768px){
     width:100%;
     padding:10px;
   }
 
+`;
+
+const Logo = styled.img`
+  height: 70px;
 `;
 
 const Links = styled.div`
@@ -45,18 +49,7 @@ const List = styled.ul`
   }
 `;
 
-const ListItem=styled.li`
-cursor:pointer;
-`;
-
-const Icons = styled.div`
-  display:flex;
-  align-items:center;
-  gap:20px;
-`;
-
-const Icon = styled.img`
-  width: 20px;
+const ListItem = styled.li`
   cursor:pointer;
 `;
 
@@ -66,15 +59,13 @@ function Navbar(){
     <Section>
       <Container>
          <Links>
-        
+          <Logo src="./img/gears_web.gif"/>
          <List>
           <ListItem>Home</ListItem>
-          <ListItem>Studio</ListItem>
-          <ListItem>Works</ListItem>
+          <ListItem>About</ListItem>
+          <ListItem>Projects</ListItem>
           <ListItem>Contact</ListItem>
          </List>
-         <Icon src="https://www.citypng.com/public/uploads/small/11640084033twctsqgxpse8mhanxhflsktftbe6gyx5pyvtwzwel8y4ry6baob0mv2aqitjx7mipotjroaf4rwparnxi6s5aczjkt5kzq1lhh0h.png"/>
-
          </Links>    
       </Container>
     </Section>

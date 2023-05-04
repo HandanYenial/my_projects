@@ -13,7 +13,7 @@ const Container = styled.div`
   overflow-y: auto;
   scrollbar-width: none;
   color: white;
-  background: url("./img/pawell.jpg");
+  background: url("./img/jr-korpa.jpg");
   &::-webkit-scrollbar{
     display: none;
   }
