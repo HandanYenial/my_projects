@@ -14,9 +14,9 @@ const Cube = () => {
       <meshStandardMaterial>
         <RenderTexture attach="map">
           <PerspectiveCamera makeDefault position={[0, 0, 9]} />
-          <color attach="background" args={["#FB2576"]} />
-          <Text ref={textRef} fontSize={1} color="#555">
-            CodeMaze
+          <color attach="background" args={["#39B5E0"]} />
+          <Text ref={textRef} fontSize={2} color="#FB2576">
+            Hello
           </Text>
         </RenderTexture>
       </meshStandardMaterial>

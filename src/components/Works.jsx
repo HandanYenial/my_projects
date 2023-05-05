@@ -9,10 +9,8 @@ import WebDesign from "./WebDesign";
 //and use it with map.
 
 const data= [
-  "Web Designer",
-  "Development",
-  "Illustration",
-  "Product Design",
+  "Events",
+  "Global&Legal",
   "Social Media",
 ];
 

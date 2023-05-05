@@ -35,6 +35,7 @@ const Left = styled.div`
 
 const Title = styled.h1`
   font-size: 74px;
+  color:#FB2576;
   @media only screen and (max-width: 768px) {
     font-size: 60px;
   }
@@ -56,14 +57,13 @@ const WhatWeDo = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
+ 
 `;
 
-const Line = styled.img`
-  height: 5px;
-`;
+
 
 const Subtitle = styled.h2`
-  color: #FB2576;
+  color: #BDE6F1;
 `;
 
 const Desc = styled.p`
@@ -72,7 +72,7 @@ const Desc = styled.p`
 `;
 
 const Button = styled.button`
-  background-color: #FB2576;
+  background-color: #3C79F5;
   color: white;
   font-weight: 500;
   width: 120px;
@@ -89,7 +89,7 @@ function Who(){
       <Container>
         <Left>
           {/* To give the size ofbox, camera effect is used:zoom */}
-        <Canvas camera={{ position: [8, 8, 8], fov: 25 }}>
+        <Canvas camera={{ position: [5, 5, 5], fov: 25 }}>
         <ambientLight intensity={0.25} />
         <directionalLight position={[8,7,6,5,4,3,2,1]} />
               <Cube/>
@@ -99,13 +99,15 @@ function Who(){
         </Left>
         <Right>
         <Title>
-            My Projects
+            About Me
           </Title>
           <WhatWeDo>
-           <Subtitle>Some of my projects</Subtitle>
+           <Subtitle></Subtitle>
           </WhatWeDo>
-          <Desc> Building a portfolio by a project at a time.</Desc>
-          <Button> See Projects </Button>
+          <Desc> 
+          Hello, my name is Handan and I'm a  passionate full-stack web developer and I'm actively working on expanding my portfolio with exciting projects. Previously, I spent nearly a decade as a STEM teacher, instructing students in both Mathematics and Coding. Let's connect!
+          </Desc>
+          <Button> My Linkedin </Button>
         </Right>
       </Container>
 

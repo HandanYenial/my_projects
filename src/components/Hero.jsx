@@ -34,12 +34,12 @@ const Container = styled.div`
 `;
 
 const Left = styled.div`
-  flex: 2;
+  flex:2;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction:column;
+  justify-content:center;
   gap: 20px;
-
+  
   @media only screen and (max-width: 768px) {
     flex: 1;
     align-items: center;
@@ -48,9 +48,10 @@ const Left = styled.div`
 
 const Title = styled.div`
   font-size:74px;
-  color:white;
+  color:"#EB5353";
   
-  @media only screen and (max-width: 768px) {
+  
+  @media only screen and (min-width:768px) {
     text-align: center;
   }
 `;
@@ -58,7 +59,7 @@ const Title = styled.div`
 const WhatWeDo = styled.div`
   display:flex;
   align-items:center;
-  gap:10px;
+  gap:30px;
 `;
 
 const Subtitle = styled.h2`
