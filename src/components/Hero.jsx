@@ -7,23 +7,25 @@ import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
 
 const Section = styled.div`
   height: 100vh;
-  scroll-snap-align:center;
+  scroll-snap-align: center;
   display: flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:space-between;
-
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  
   @media only screen and (max-width: 768px) {
     height: 200vh;
   }
 `;
 
+
 const Container = styled.div`
-  height:100%;
-  scroll-snap-align:center;
-  width:1400px;
-  display:flex;
-  justify-content:space-between;
+  height: 100%;
+  scroll-snap-align: center;
+  width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
 
   @media only screen and (max-width: 768px) {
     width: 100%;
@@ -34,21 +36,24 @@ const Container = styled.div`
 `;
 
 const Left = styled.div`
-  flex:2;
+  flex: 2;
   display: flex;
-  flex-direction:column;
-  justify-content:center;
+  flex-direction: column;
+  justify-content: center;
+  text-align:center;
+  align-items:center;
   gap: 20px;
-  
   @media only screen and (max-width: 768px) {
     flex: 1;
     align-items: center;
   }
 `;
 
+
 const Title = styled.div`
   font-size:74px;
   color:"#EB5353";
+  font-weight:500;
   
   
   @media only screen and (min-width:768px) {
@@ -64,12 +69,15 @@ const WhatWeDo = styled.div`
 
 const Subtitle = styled.h2`
   color:#FCE700;
-  font-size:24px;
+  font-size:50px;
+  justify-content:center;
+  text-align:center;
 `;
 
 const Desc= styled.p`
   font-size:24px;
   color:white;
+  justify-content:center;
 
   @media only screen and (max-width: 768px) {
     padding: 20px;
@@ -77,16 +85,7 @@ const Desc= styled.p`
   }
 `;
 
-const Button = styled.button`
-  background-color:  #FCE700;
-  color:#112B3C;
-  font-weight:500;
-  width:100px;
-  padding:15px;
-  border:none;
-  border-radius:5px;
-  cursor:pointer;
-`;
+
 
 const Right = styled.div`
   flex:3;
@@ -121,6 +120,25 @@ const Img = styled.img`
   }
 `;
 
+const Logo = styled.img`
+  height: 70px;
+  width:70px;
+`;
+
+const List = styled.ul`
+  display:flex;
+  gap:20px;
+  list-style:none;
+
+  @media only screen and (max-width:768){
+    display:none;
+  }
+`;
+
+const ListItem = styled.li`
+  cursor:pointer;
+  justify-content:center;
+`;
 
 function Hero(){
   return (
@@ -129,13 +147,17 @@ function Hero(){
       <Container>
         <Left>
           <Title>
-            Hi, I'm Handan
+          {/* <Logo src="./img/gears_web.gif"/> */}
+            Hello
           </Title>
           <WhatWeDo>
-           <Subtitle>I'm a full stack web developer</Subtitle>
+           <Subtitle>I'm Handan Yenial</Subtitle>
           </WhatWeDo>
-          <Desc> Building a portfolio by a project at a time.</Desc>
-          <Button> Learn More </Button>
+          <Desc> I'm a passionate Full-Stack Web Developer and I'm actively working on expanding my portfolio with exciting projects.</Desc>
+          <List>
+          <ListItem><a href="https://www.linkedin.com/in/handanyenial/"> <Logo src="./img/linkedin.webp"/></a></ListItem>
+          <ListItem><a href="https://github.com/HandanYenial"><Logo src="./img/kindpng.png"/></a></ListItem>
+          </List>
         </Left>
         <Right>
         <Canvas>

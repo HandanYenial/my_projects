@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import styled from "styled-components";
 
-import ProductDesign from "./ProductDesign";
-import WebDesign from "./WebDesign";
+import GlobalLegal from "./GlobalLegal";
+import Events from "./Events";
 
 
 //instead of creating 5 <ListIem>s, I can create an array of the data
@@ -10,8 +10,8 @@ import WebDesign from "./WebDesign";
 
 const data= [
   "Events",
-  "Global&Legal",
-  "Social Media",
+  "Global&Legal"
+  
 ];
 
 const Section = styled.div`
@@ -69,7 +69,7 @@ const ListItem = styled.li`
     position: absolute;
     top: 0;
     left: 0;
-    color: pink;
+    color: #FCC8F8;
     width: 0px;
     overflow: hidden;
     white-space: nowrap;
@@ -90,8 +90,9 @@ const Right = styled.div`
   flex: 1;
 `;
 
+
 function Works() {
-  const [work,setWork] = useState("Web Design");
+  const [work,setWork] = useState("Events");
 
   return (
     <Section>
@@ -104,19 +105,22 @@ function Works() {
               </ListItem>
             ))}
           </List>
-
          </Left>
          <Right>
-         {work === "Web Design" ? (
-            <WebDesign />
-          ) : work === "Development" ? (
-            <Development />
+         {work === "Events" ? (
+            <Events/>
+          ) : work === "Global&Legal" ? (
+            <GlobalLegal/>
           ) : (
-            <ProductDesign />
+            <SocialMedia/>
           )}
          </Right>
+
+         
       </Container>
+     
     </Section>
+    
   );
 }
 

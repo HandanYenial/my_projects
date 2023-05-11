@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 
+
 const Section = styled.div`
    display:flex;
    justify-content:center;
@@ -51,24 +52,34 @@ const List = styled.ul`
 
 const ListItem = styled.li`
   cursor:pointer;
+  align-items:center;
+  padding:10px;
+  margin:10px;
+  font-size:larger;
 `;
 
 
 function Navbar(){
   return (
+   
     <Section>
       <Container>
          <Links>
-          <Logo src="./img/gears_web.gif"/>
+         
          <List>
-          <ListItem>Home</ListItem>
-          <ListItem>About</ListItem>
-          <ListItem>Projects</ListItem>
-          <ListItem>Contact</ListItem>
+          
+          <ListItem> <Logo src="./img/javascript-logo.png"/></ListItem>
+          <ListItem> <Logo src="./img/python-language-logo.png"/></ListItem>
+          <ListItem> <Logo src="./img/react.png"/></ListItem>
+          <ListItem> <Logo src="./img/html.png"/></ListItem>
+          <ListItem> <Logo src="./img/css-logo.png"/></ListItem>
+          <ListItem> Web Development - Software Engineering</ListItem>
          </List>
+         {/* <a href="https://iconscout.com/3ds/python-language-logo" target="_blank">Free Python Language Logo 3D Icon</a> by <a href="https://iconscout.com/contributors/fahrulsaputra7">Fahrul Saputra</a> on <a href="https://iconscout.com">IconScout</a> */}
          </Links>    
       </Container>
     </Section>
+  
   );
 };
 

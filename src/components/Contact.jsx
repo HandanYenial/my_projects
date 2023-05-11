@@ -27,7 +27,9 @@ const Left = styled.div`
 `;
 
 const Title = styled.h1`
-  font-weight: 200;
+  font-weight: 600;
+  color:#da4ea2;
+  
 `;
 
 const Form = styled.form`
@@ -43,7 +45,7 @@ const Form = styled.form`
 
 const Input = styled.input`
   padding: 20px;
-  background-color: #e8e6e6;
+  background-color: #B0DAFF;
   border: none;
   border-radius: 5px;
 `;
@@ -52,14 +54,15 @@ const TextArea = styled.textarea`
   padding: 20px;
   border: none;
   border-radius: 5px;
-  background-color: #e8e6e6;
+  background-color: #B0DAFF;
 `;
 
 const Button = styled.button`
   background-color: #da4ea2;
-  color: white;
+  color: black;
   border: none;
-  font-weight: bold;
+  
+  font-size:large;
   cursor: pointer;
   border-radius: 5px;
   padding: 20px;
@@ -103,11 +106,11 @@ const Contact = () => {
       <Container>
         <Left>
           <Form ref={ref} onSubmit={handleSubmit}>
-            <Title>Contact Us</Title>
+            <Title>Contact Me</Title>
             <Input placeholder="Name" name="name" />
             <Input placeholder="Email" name="email" />
             <TextArea
-              placeholder="Write your message"
+              placeholder="Enter your message"
               name="message"
               rows={10}
             />
