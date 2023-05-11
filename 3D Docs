@@ -1,0 +1,74 @@
+Packages I used
+1. Vite : a build tool that aims to provide a faster and leaner development experience for modern web projects
+
+`npm create vite@latest`
+
+2. Tailwind: A utility-first CSS framework packed with classes like `flex`, `pt-4`, `text-center` and `rotate-90` that can be composed to build any design, directly in your markup.
+
+`npm install -D tailwindcss`
+
+`npx tailwindcss init`
+
+`npm install --legacy-peer-deps@react-three/fiber@react-three/drei maath react tilt react-vertical-timeline-component @emailjs/browser framer-motion react router dom`
+
+--legacy-peer-deps : when we use older versions of react(as react tilt), we need to add this extension
+
+@react-three/fiber : React based Threejs library - will allow us to create threejs code in React.
+
+@react-three/drei  :
+
+maath  : for math utility - we will need for 3d
+
+react tilt : provide cool animation when hovering over cards
+
+react-vertical-timeline-component :
+
+@emailjs/browser : for email
+
+react router dom :[React Router](https://reactrouter.com/docs/en/v6 "React Router") is a popular standard library for routing among various view components in React applications. It helps keep the user interface in sync with the URL. In addition, React Router allows defining which view to display for a specified URL.
+
+Adding 3D Objects
+1. Open up the terminal
+$ mkdir ~/.npm-global
+$ npm config set prefix '~/.npm-global'
+$ export PATH=~/.npm-global/bin:$PATH      
+$ source ~/.profile
+$ npm install --location=global gltf-pipeline
+
+install gltf-pipeline globally. Since I got error messages the other lines are to fix that message.
+2. Find the 3D objects I want to use and downloaded them
+~/Documents$ cd ..
+~$ cd Downloads
+3. Then transfrom gltf file to jsx(foldername:grand_piano, modelname:scene)
+~/Downloads$ cd grand_piano
+~/Downloads/grand_piano$ npx gltfjsx scene.gltf --transform
+4. In the folder the file name will be: scene.jsx. Get scene.jsx and transfer it to the components file in React. When I transfer it there was an error as"no default..." So I added default to the function as:
+export default function Model(props) {
+  const { nodes, materials } = useGLTF('/scene-transformed.glb')
+  return (
+ 
+ 5. Then transfer scene-transformed.glb file to public
+ 6. Go to the jsx file where I want to add the 3D model, and I import it:
+ import Scene from "./Scene";
+ 7. I was able to see the 3D model but it was a black shadow kind of an image. I needed light. So I added light:
+ 
+ const Events = () => {
+  return (
+    <>
+      <Canvas>
+
+        <Stage environment="city" intensity={0.6}>
+        <ambientLight intensity={0.6} />
+        <directionalLight intensity={0.5} />
+        {/* "Grand Piano" (https://skfb.ly/6UUnK) by Amatsukast is licensed under CC Attribution-NonCommercial-ShareAlike (http://creativecommons.org/licenses/by-nc-sa/4.0/). */}
+         <Scene/>
+        </Stage>
+          {/* Added the 3D model as Scene but it seems only a black shadow--needs light--I can use Stage for that */}
+          <OrbitControls enableZoom={false} autoRotate />
+      
+      </Canvas>
+    
+ 
+
+
+
