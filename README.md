@@ -1,6 +1,6 @@
 # my_projects
 
-Hi, Hi, this is my portfolio! As a full-stack web developer, I am excited to share my skills and projects with you. In this portfolio project I want to improve my React skills, and learn usage of Email.js, Three.js and React-Vite. Thank you for visiting!
+Hi, this is my portfolio! As a full-stack web developer, I am excited to share my skills and projects with you. In this portfolio project I want to improve my React skills, and learn usage of Email.js, Three.js and React-Vite. Thank you for visiting!
 
 The website is deployed here: https://my-projects-silk-pi.vercel.app/
 
