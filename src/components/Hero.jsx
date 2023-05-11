@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense }from 'react';
 import styled from "styled-components";
 import Navbar from "./Navbar";
 import { Canvas } from "@react-three/fiber";
@@ -25,7 +25,7 @@ const Container = styled.div`
   width: 1400px;
   display: flex;
   justify-content: space-between;
-  align-items:center;
+  
 
   @media only screen and (max-width: 768px) {
     width: 100%;
@@ -161,11 +161,11 @@ function Hero(){
         </Left>
         <Right>
         <Canvas>
-            
+              <Suspense>
               <OrbitControls enableZoom={false} />
               <ambientLight intensity={1} />
               <directionalLight position={[3, 2, 1]} />
-              <Sphere args={[1, 500, 500]} scale={2.4}>
+              <Sphere args={[1, 100, 200]} scale={2.4}>
                 <MeshDistortMaterial
                   color="#EB5353"
                   attach="material"
@@ -173,7 +173,7 @@ function Hero(){
                   speed={2}
                 />
               </Sphere>
-           
+            </Suspense>
           </Canvas>
           <Img src="./img/Pngtree.png"/>
           {/* <a href='https://pngtree.com/so/hijab'>hijab png from pngtree.com/</a> */}
