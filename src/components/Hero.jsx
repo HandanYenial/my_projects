@@ -5,6 +5,7 @@ import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
 
 
+
 const Section = styled.div`
   height: 100vh;
   scroll-snap-align: center;

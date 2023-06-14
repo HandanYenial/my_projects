@@ -6,6 +6,7 @@ import { Canvas } from "@react-three/fiber";
 import Cube from "./Cube";
 
 
+
 const Section = styled.div`
   height: 100vh;
   scroll-snap-align:center;
