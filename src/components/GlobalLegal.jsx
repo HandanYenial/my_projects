@@ -1,7 +1,7 @@
 import React from "react";
 import { OrbitControls, Stage } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import Lion from "./Lion";
+//import Lion from "./Lion";
 
 import styled from "styled-components";
 
@@ -34,7 +34,7 @@ const GlobalLegal = () => {
         <Stage environment="city" intensity={0.6}>
        
         {/* "Themis' Scales of Justice" (https://skfb.ly/ozINO) by Incg5764 is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). */}
-         <Lion/>
+         {/* <Lion/> */}
         </Stage>
           {/* Added the 3D model as Scene but it seems only a black shadow--needs light--I can use Stage for that */}
           <OrbitControls enableZoom={false}/>
