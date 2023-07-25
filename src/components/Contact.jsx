@@ -28,8 +28,7 @@ const Left = styled.div`
 
 const Title = styled.h1`
   font-weight: 600;
-  color:#da4ea2;
-  
+  color:#da4ea2; 
 `;
 
 const Form = styled.form`
@@ -61,7 +60,6 @@ const Button = styled.button`
   background-color: #da4ea2;
   color: black;
   border: none;
-  
   font-size:large;
   cursor: pointer;
   border-radius: 5px;
@@ -82,7 +80,7 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
+    
     emailjs
       .sendForm(
         "service_9qyfg8k",
