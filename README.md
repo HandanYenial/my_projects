@@ -25,7 +25,7 @@ Website Deployment: https://hyportfolio23.netlify.app/
 - ***Email.js:*** A JavaScript library facilitating email sending using client-side technologies.
 
 - ***Three.js:*** A JavaScript-based WebGL engine used for incorporating 3D objects.
-- 
+
 - ***CSS:*** Styling the webpage to enhance the user experience.
 
 Feel free to explore my portfolio, and if you have any questions or would like to connect, don't hesitate to reach out!
