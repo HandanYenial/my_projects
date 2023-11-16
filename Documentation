@@ -1,0 +1,13 @@
+# Setting up Project Dependencies
+
+## 1. Vite
+[Vite](https://vitejs.dev/) is a build tool designed to offer a faster and more streamlined development experience for modern web projects.
+
+```bash
+npm create vite@latest
+
+##2.Tailwind
+Tailwind is a utility-first CSS framework, providing a range of pre-defined classes for quick and flexible design implementation directly in your markup.
+```bash
+npm install -D tailwindcss
+npx tailwindcss init
