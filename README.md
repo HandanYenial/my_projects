@@ -1,33 +1,34 @@
 # my_projects
 
-Hi, this is my portfolio! As a full-stack web developer, I am excited to share my skills and projects with you. In this portfolio project, I used React,Email.js, Three.js, and React-Vite. Thank you for visiting!
+Hello! I'm a full-stack web developer thrilled to showcase my skills and projects with you. Below is an overview of my portfolio project, highlighting the technologies I used. Thank you for dropping by!
 
-The website is deployed here: https://my-projects-silk-pi.vercel.app/
+Website Deployment: https://hyportfolio23.netlify.app/
 
 ## Parts
-**Homepage:** Homepage displays some of the tech-stack I've been using as JavaScript, HTML, CSS, React, and Python.
+**Homepage:** The homepage showcases the technologies in my toolkit, including JavaScript, HTML, CSS, React, and Python.
 
-**About:** Brief information about my background, experience, and education.
+**About:** Get to know me! This section provides a brief overview of my background, experience, and education.
 
-**Projects:** Displays two of my projects I'm proud of. Events Project and Globa&Legal Projects.
+**Projects:** Explore two projects I'm proud of: the Events Project and the Global & Legal Projects.
 
-**Contact Me:** Displays an email part to contact me and a map showing my location. 
+**Contact Me:** Reach out! Find an email contact form and a map displaying my location. 
 
 ## Tech Stack
-- ***Vercel***: Vercel is the platform for front-end developers, providing speed and reliability.
+- ***Netlify***: The platform for front-end developers, offering speed and reliability.
 
-- ***MapQuest:*** Official MapQuest website, find driving directions, maps, live traffic updates, and road conditions.
+- ***MapQuest:*** Official MapQuest website for driving directions, maps, live traffic updates, and road conditions.
 
-- ***React:***  React is a JavaScript library developed by Facebook that allows developers to create fast user interfaces for websites and applications
+- ***React:***  A JavaScript library by Facebook, empowering developers to create fast user interfaces for websites and applications.
 
 - ***Vite:*** A tool to quickly start a project from a basic template for popular frameworks(React).
 
-- ***Email.js:*** EmailJS is a JavaScript library that helps send emails using only client-side technologies.
+- ***Email.js:*** A JavaScript library facilitating email sending using client-side technologies.
 
-- ***Three.js:*** A javaScript-based Web-GL engine. Used for adding 3D objects.
+- ***Three.js:*** A JavaScript-based WebGL engine used for incorporating 3D objects.
+- 
+- ***CSS:*** Styling the webpage to enhance the user experience.
 
-- ***CSS:*** To style the webpage
-
+Feel free to explore my portfolio, and if you have any questions or would like to connect, don't hesitate to reach out!
 
 
 
